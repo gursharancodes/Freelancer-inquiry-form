@@ -82,7 +82,7 @@ const MultiStepForm = () => {
     <div className="max-w-xl mx-auto px-4 py-10">
       {/* name */}
       <div className="flex flex-col gap-1 items-center mb-10 text-center">
-        <h1 className="text-2xl font-semibold">GursharanCodes.</h1>
+        <h1 className="text-2xl font-semibold">GursharanCodes</h1>
         <p className="text-gray-500 text-xs md:text-sm mb-3">
           {" "}
           Frontend Developer
