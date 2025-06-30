@@ -4,7 +4,7 @@ A responsive, accessible, and real-world multi-step inquiry form built with **Re
 
 ## 📸 Live Demo
 
-[🔗 View Live Form](https://freelacer-inquiry-form.pages.dev)
+[🔗 View Live Form](https://freelancer-inquiry-form.pages.dev/)
 
 ---
 
@@ -105,4 +105,4 @@ No need to re-validate previous steps.
 ---
 
 ## 🌐 Deployment (Cloudflare Pages)
-[🔗 View Live Form](https://freelacer-inquiry-form.pages.dev)
+[🔗 View Live Form](https://freelancer-inquiry-form.pages.dev/)
