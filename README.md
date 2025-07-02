@@ -1,108 +1,183 @@
-# 🚀 Freelancer Project Inquiry – Multi-Step Form
+# 📄 Freelancer Project Inquiry – Multi-Step Form
 
-A responsive, accessible, and real-world multi-step inquiry form built with **React**, **Tailwind CSS**, **Zod**, and **Supabase**. Designed to simulate a freelancer or agency client inquiry form with validation, file upload, and cloud persistence.
+A real-world, responsive, and schema-validated multi-step form built with **React**, **Tailwind CSS**, **Zod**, and **Supabase**, designed to streamline project inquiries for freelancers or agencies. Includes step-by-step validation, file upload support, database persistence, and a secure admin dashboard.
 
-## 📸 Live Demo
+![React](https://img.shields.io/badge/React-18.x-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-teal)
+![Zod](https://img.shields.io/badge/Zod-Validation-red)
+![Supabase](https://img.shields.io/badge/Supabase-Fullstack-brightgreen)
+![Deployment](https://img.shields.io/badge/Deployed-Cloudflare%20Pages-green)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-[🔗 View Live Form](https://freelancer-inquiry-form.pages.dev/)
+---
+
+## 📘 Table of Contents
+
+| Section              | Description                                      |
+| -------------------- | ------------------------------------------------ |
+| Project Overview     | High-level summary of project purpose and goals  |
+| Features             | Key features and functionalities                 |
+| Tech Stack           | Technologies used in the project                 |
+| Form Structure       | Breakdown of each step and validation logic      |
+| Admin Panel          | Access and usage details for admin functionality |
+| Supabase Integration | Schema for DB and file upload                    |
+| Getting Started      | Instructions to run locally and deploy           |
+| Live Demo            | Hosted version of the form                       |
+| License              | Licensing and usage terms                        |
+
+---
+
+## 🚀 Project Overview
+
+The **Freelancer Project Inquiry Form** is a practical, modern implementation of a multi-step form commonly used by freelancers or creative agencies to gather project details from clients. It features robust form validation, responsive layout, real-time data storage, and a protected admin dashboard.
+
+This project replicates real-world scenarios including file uploads, step-wise validation, and secure backend integration with **Supabase**, offering an ideal learning and portfolio-building opportunity.
 
 ---
 
 ## 🧩 Features
 
-- ✅ Multi-step form architecture (4 logical steps)
-- ✅ Schema-based validation using `Zod`
-- ✅ Form state handling with `React Hook Form`
-- ✅ File upload to `Supabase Storage` (PDF, PNG, JPG)
-- ✅ Data persistence to `Supabase Database`
-- ✅ Animated step transitions using `Framer Motion`
-- ✅ Admin panel to view inquiries (protected via static login)
-- ✅ Mobile-first, responsive UI with Tailwind CSS
+* ✅ Multi-step architecture with clear progression
+* 🧠 Step-wise schema validation using **Zod**
+* 📝 Managed form state via **React Hook Form**
+* 📁 File upload (PDF, PNG, JPG) with Supabase Storage
+* 💾 Inquiry data stored in Supabase Database
+* 🔐 Admin panel protected via static credentials
+* 📱 Fully responsive and accessible design
+* ✨ Animated transitions with **Framer Motion**
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Tool            | Purpose                            |
-|-----------------|-------------------------------------|
-| **React**       | Component-based UI                 |
-| **Vite**        | Frontend build tool                |
-| **Tailwind CSS**| Utility-first styling              |
-| **Zod**         | Validation schema for each step    |
-| **React Hook Form** | Form handling and integration |
-| **Supabase**    | Auth, Database, Storage backend    |
-| **Framer Motion** | Smooth UI transitions (optional) |
+| Technology      | Usage                                     |
+| --------------- | ----------------------------------------- |
+| React           | Component-based UI rendering              |
+| Vite            | Lightning-fast frontend tooling           |
+| Tailwind CSS    | Utility-first CSS framework               |
+| Zod             | Step-wise form validation                 |
+| React Hook Form | Form handling with integration support    |
+| Supabase        | Backend services: Database, Auth, Storage |
+| Framer Motion   | Seamless animations between form steps    |
 
 ---
 
-## 🔗 Form Structure
+## 🗂️ Form Structure
 
-### Step 1 – Personal Info
-| Field        | Type    | Validation             |
-|--------------|---------|------------------------|
-| Full Name    | Text    | Required, min 2 chars  |
-| Email        | Email   | Required, valid format |
-| Phone Number | Text    | Optional               |
+### 🔹 Step 1 – Personal Info
 
-### Step 2 – Project Details
-| Field        | Type    | Validation             |
-|--------------|---------|------------------------|
-| Project Type | Dropdown| Required               |
-| Budget       | Select  | Optional               |
-| Timeline     | Text    | Required               |
+| Field        | Type  | Validation             |
+| ------------ | ----- | ---------------------- |
+| Full Name    | Text  | Required, min 2 chars  |
+| Email        | Email | Required, valid format |
+| Phone Number | Text  | Optional               |
 
-### Step 3 – Description & Upload
-| Field        | Type    | Validation                      |
-|--------------|---------|---------------------------------|
-| Description  | Textarea| Required, min 20 characters     |
-| File Upload  | File    | Optional (.pdf, .jpg, .png only)|
+### 🔹 Step 2 – Project Details
 
-### Step 4 – Review & Submit
-- Displays all data for confirmation
-- Checkbox to confirm info before submission
+| Field        | Type     | Validation |
+| ------------ | -------- | ---------- |
+| Project Type | Dropdown | Required   |
+| Budget       | Select   | Optional   |
+| Timeline     | Text     | Required   |
+
+### 🔹 Step 3 – Description & Upload
+
+| Field       | Type     | Validation                        |
+| ----------- | -------- | --------------------------------- |
+| Description | Textarea | Required, min 20 characters       |
+| File Upload | File     | Optional, (.pdf, .jpg, .png only) |
+
+### 🔹 Step 4 – Review & Submit
+
+* Summarized review of all inputs
+* Checkbox to confirm data before submission
 
 ---
 
 ## 🔐 Admin Panel
 
-- Protected via a static credential check (stored in `.env`)
-- Requires matching email/password to access `/admin`
-- Admin can view all submissions with file links and timestamps
+* Accessible at `/admin` route
+* Protected via `.env`-based static email/password
+* Displays all submitted inquiries with uploaded files and timestamps
 
 ---
 
 ## 💾 Supabase Integration
 
-### Database Table: `inquiries`
+### 📊 Database Table – `inquiries`
 
 | Column        | Type      |
-|---------------|-----------|
+| ------------- | --------- |
 | id            | UUID (PK) |
-| full_name     | Text      |
+| full\_name    | Text      |
 | email         | Text      |
 | phone         | Text      |
-| project_type  | Text      |
+| project\_type | Text      |
 | budget        | Text      |
 | timeline      | Text      |
 | description   | Text      |
-| file_url      | Text      |
-| created_at    | Timestamp |
+| file\_url     | Text      |
+| created\_at   | Timestamp |
 
-### Storage Bucket: `inquiry-uploads`
+### 📁 Storage Bucket – `inquiry-uploads`
 
-- Accepts only: `application/pdf, image/*`
-- Max file size: 10MB (configurable)
-- Public read access with RLS policy for secure upload
-
----
-
-## 🧪 Validation Logic
-
-Validation is handled per step using **Zod** schemas.  
-Each step validates its own inputs before proceeding.  
-No need to re-validate previous steps.
+* Accepted types: `application/pdf`, `image/*`
+* Max size: 10MB (configurable)
+* Public access controlled with RLS policies
 
 ---
 
-## 🌐 Deployment (Cloudflare Pages)
-[🔗 View Live Form](https://freelancer-inquiry-form.pages.dev/)
+## 📬 Getting Started
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/gursharancodes/freelancer-inquiry-form.git
+   cd freelancer-inquiry-form
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Setup Supabase:**
+
+   * Create a project on [Supabase](https://supabase.com/)
+   * Configure your database schema and storage bucket
+   * Add your Supabase credentials in a `.env` file
+
+4. **Set up environment variables:**
+
+   ```env
+   VITE_SUPABASE_URL=your_url
+   VITE_SUPABASE_ANON_KEY=your_key
+   VITE_ADMIN_EMAIL=admin@example.com
+   VITE_ADMIN_PASSWORD=yourpassword
+   ```
+
+5. **Run development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+6. **Build for production:**
+
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 📌 Live Demo
+
+> [🌐 View Freelancer Inquiry Form](https://freelancer-inquiry-form.pages.dev/)
+
+---
+
+## 📄 License
+
+This project is released under the **MIT License** for **educational and portfolio** use.
+**Commercial use is prohibited** without prior written permission.
