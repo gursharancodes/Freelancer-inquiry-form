@@ -2,8 +2,8 @@
 
 A real-world, responsive, and schema-validated multi-step form built with **React**, **Tailwind CSS**, **Zod**, and **Supabase**, designed to streamline project inquiries for freelancers or agencies. Includes step-by-step validation, file upload support, database persistence, and a secure admin dashboard.
 
-![React](https://img.shields.io/badge/React-18.x-blue)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-teal)
+![React](https://img.shields.io/badge/React-19.x-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.x-teal)
 ![Zod](https://img.shields.io/badge/Zod-Validation-red)
 ![Supabase](https://img.shields.io/badge/Supabase-Fullstack-brightgreen)
 ![Deployment](https://img.shields.io/badge/Deployed-Cloudflare%20Pages-green)
